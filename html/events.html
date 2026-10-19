@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub Portal - Events</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .controls-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        .controls-container input, .controls-container select {
+            padding: 8px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .pagination button {
+            padding: 8px 12px;
+            border: 1px solid #0056b3;
+            background: white;
+            color: #0056b3;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .pagination button.active {
+            background: #0056b3;
+            color: white;
+        }
+        .pagination button:disabled {
+            background: #e9ecef;
+            border-color: #dee2e6;
+            color: #6c757d;
+            cursor: not-allowed;
+        }
+        #error-message {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+<div class="grid-container">
+    <div class="flex-row">
+        <div class="flex-col">
+            <h1>STUDENTHUB PORTAL</h1>
+        </div>
+        <div class="flex-col" style="text-align: right;">
+            <a href="profile.html"><b>PROFILE</b></a> &nbsp;&nbsp;
+            <a href="home.html"><b>BACK</b></a>
+        </div>
+    </div>
+    <div class="flex-row">
+        <div class="flex-col">
+            <h2>EVENTS</h2>
+            <div class="controls-container">
+                <input type="text" id="searchInput" placeholder="Search events by title...">
+                <select id="typeFilter">
+                    <option value="All">All Types</option>
+                    <option value="Hackathon">Hackathon</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Contest">Contest</option>
+                    <option value="Seminar">Seminar</option>
+                    <option value="Exhibition">Exhibition</option>
+                </select>
+                <select id="sortSelect">
+                    <option value="date-asc">Sort by Date (Earliest)</option>
+                    <option value="date-desc">Sort by Date (Latest)</option>
+                    <option value="title-asc">Sort by Title (A-Z)</option>
+                    <option value="title-desc">Sort by Title (Z-A)</option>
+                </select>
+            </div>
+            
+            <p id="loading-message">Loading events...</p>
+            <p id="error-message"></p>
+
+            <div id="events-container" class="grid-container">
+                <!-- Events will be rendered here dynamically -->
+            </div>
+            
+            <div class="pagination" id="pagination-controls">
+                <!-- Pagination buttons will be rendered here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<script src="events-app.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub Portal - Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="page-wrapper">
+
+<br><br><br>
+
+<form action="../php/login.php" method="POST">
+    <div class="grid-container">
+        <div class="flex-row">
+            <div class="flex-col">
+                <h1>LOGIN</h1>
+            </div>
+            <div class="flex-col" style="text-align: right;">
+                <a href="home.html"><b>BACK</b></a>
+            </div>
+        </div>
+        <div class="flex-row">
+            <div class="flex-col">
+                <div class="grid-container">
+                    <div class="flex-row">
+                        <div class="flex-col"><b>EMAIL:</b></div>
+                        <div class="flex-col">
+                            <input type="email" name="email" size="35" required placeholder="Enter your email">
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col"><b>PASSWORD:</b></div>
+                        <div class="flex-col">
+                            <input type="password" name="password" size="35" required placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col"></div>
+                        <div class="flex-col" style="text-align: left;">
+                            <label style="font-size: 0.9rem; font-weight: normal; cursor: pointer;">
+                                <input type="checkbox" name="remember_me"> Remember me
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col">
+                            <br>
+                            <input type="submit" value="  LOGIN  ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-row">
+            <div class="flex-col">
+                <a href="signup.html"><h3>DON'T HAVE AN ACCOUNT? SIGN UP</h3></a>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+</div>
+</body>
+</html>

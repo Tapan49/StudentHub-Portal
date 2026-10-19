@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub Portal - Sign Up</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .error-message {
+            color: #d9534f;
+            font-size: 0.85rem;
+            display: block;
+            margin-top: 5px;
+            min-height: 1.2em;
+        }
+        .strength-meter {
+            height: 5px;
+            background-color: #e0e0e0;
+            border-radius: 3px;
+            margin-top: 5px;
+            width: 100%;
+        }
+        .strength-meter div {
+            height: 100%;
+            border-radius: 3px;
+            width: 0;
+            transition: width 0.3s;
+        }
+        .strength-weak { background-color: #d9534f; width: 33%; }
+        .strength-medium { background-color: #f0ad4e; width: 66%; }
+        .strength-strong { background-color: #5cb85c; width: 100%; }
+        form label {
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+<br><br>
+
+<form id="registrationForm" action="login.html" method="get" novalidate>
+    <div class="grid-container">
+        <div class="flex-row">
+            <div class="flex-col">
+                <h1>SIGN UP</h1>
+            </div>
+            <div class="flex-col" style="text-align: right;">
+                <a href="home.html"><b>BACK</b></a>
+            </div>
+        </div>
+        <div class="flex-row">
+            <div class="flex-col">
+                <div class="grid-container">
+                    <div class="flex-row">
+                        <div class="flex-col"><label for="name">NAME:</label></div>
+                        <div class="flex-col">
+                            <input type="text" id="name" name="name" required placeholder="Enter full name">
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col"><label for="email">EMAIL:</label></div>
+                        <div class="flex-col">
+                            <input type="email" id="email" name="email" required placeholder="Enter student email">
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col"><label for="mobile">MOBILE NUMBER:</label></div>
+                        <div class="flex-col">
+                            <input type="tel" id="mobile" name="mobile" required placeholder="Enter 10-digit mobile number">
+                            <span class="error-message" id="mobileError"></span>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col"><label for="course">COURSE:</label></div>
+                        <div class="flex-col">
+                            <select id="course" name="course" required style="width:100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;">
+                                <option value="">Select a Course</option>
+                                <option value="BTech">B.Tech</option>
+                                <option value="MTech">M.Tech</option>
+                                <option value="BCA">BCA</option>
+                                <option value="MCA">MCA</option>
+                            </select>
+                            <span class="error-message" id="courseError"></span>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col"><label for="year">YEAR:</label></div>
+                        <div class="flex-col">
+                            <select id="year" name="year" required style="width:100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;">
+                                <option value="">Select Year</option>
+                                <option value="1">1st Year</option>
+                                <option value="2">2nd Year</option>
+                                <option value="3">3rd Year</option>
+                                <option value="4">4th Year</option>
+                            </select>
+                            <span class="error-message" id="yearError"></span>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col"><label>GENDER:</label></div>
+                        <div class="flex-col" style="text-align: left;">
+                            <label style="font-weight: normal; margin-right: 15px;"><input type="radio" name="gender" value="Male" required> Male</label>
+                            <label style="font-weight: normal; margin-right: 15px;"><input type="radio" name="gender" value="Female"> Female</label>
+                            <label style="font-weight: normal;"><input type="radio" name="gender" value="Other"> Other</label>
+                            <span class="error-message" id="genderError"></span>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col"><label for="password">PASSWORD:</label></div>
+                        <div class="flex-col">
+                            <input type="password" id="password" name="password" required placeholder="Create password">
+                            <div class="strength-meter"><div id="strengthBar"></div></div>
+                            <span class="error-message" id="passwordError"></span>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col"><label for="confirm_password">CONFIRM PASSWORD:</label></div>
+                        <div class="flex-col">
+                            <input type="password" id="confirm_password" name="confirm_password" required placeholder="Confirm password">
+                            <span class="error-message" id="confirmPasswordError"></span>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col"></div>
+                        <div class="flex-col" style="text-align: left;">
+                            <label style="font-weight: normal;">
+                                <input type="checkbox" id="terms" name="terms" required> I accept the terms and conditions
+                            </label>
+                            <span class="error-message" id="termsError"></span>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col">
+                            <br>
+                            <input type="submit" value="  CREATE ACCOUNT  ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-row">
+            <div class="flex-col">
+                <a href="login.html"><h3>ALREADY HAVE AN ACCOUNT? LOGIN</h3></a>
+            </div>
+        </div>
+    </div>
+</form>
+
+</div>
+<script src="signup-validation.js"></script>
+</body>
+</html>

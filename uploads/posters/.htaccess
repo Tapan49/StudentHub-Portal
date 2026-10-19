@@ -1,0 +1,5 @@
+# Upload Directory Security Protection
+Options -Indexes -ExecCGI
+<FilesMatch "\.(php|php5|php7|phtml|sh|py|pl|cgi)$">
+    Deny from all
+</FilesMatch>

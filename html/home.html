@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub Portal - Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="light">
+
+<div id="notification-banner">
+    <span>Important Notification: Portal will be under maintenance tonight.</span>
+    <button id="close-banner">X</button>
+</div>
+
+<div class="page-wrapper">
+
+<div class="grid-container">
+    <div class="flex-row">
+        <div class="flex-col">
+            <h1>STUDENTHUB PORTAL</h1>
+        </div>
+        <div class="flex-col nav-container">
+            <button id="hamburger-btn">☰</button>
+            <div id="nav-menu">
+                <a href="profile.html"><b>PROFILE</b></a> 
+                <a href="login.html"><b>LOGIN</b></a> 
+                <a href="signup.html"><b>SIGNUP</b></a>
+            </div>
+            <button id="theme-btn">Toggle Theme</button>
+        </div>
+    </div>
+    
+    <div class="flex-row">
+        <div class="flex-col">
+            <h2>DASHBOARD</h2>
+        </div>
+    </div>
+    <div class="flex-row">
+        <div class="flex-col">
+            <p>Welcome to StudentHub Portal!</p>
+            <p>Access your timetable, courses, events, placement records, and scholarships using the portal navigation below.</p>
+            <button id="open-modal-btn">Show Announcements</button>
+        </div>
+    </div>
+    <div class="flex-row">
+        <div class="flex-col">
+            <div class="grid-container">
+                <div class="flex-row">
+                    <div class="flex-col">
+                        <a href="timetable.html"><h3>TIME TABLE</h3></a>
+                    </div>
+                    <div class="flex-col">
+                        <a href="courses.html"><h3>COURSE</h3></a>
+                    </div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-col">
+                        <a href="events.html"><h3>EVENTS</h3></a>
+                    </div>
+                    <div class="flex-col">
+                        <a href="placement.html"><h3>PLACEMENT RECORDS</h3></a>
+                    </div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-col">
+                        <a href="scholarship.html"><h3>SCHOLARSHIP DETAILS</h3></a>
+                    </div>
+                    <div class="flex-col">
+                        <a href="workshop.html"><h3>WORKSHOP DETAILS</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex-row">
+        <div class="flex-col">
+            <h2>Gallery / Highlights</h2>
+            <div class="slider-container">
+                <div class="slide active-slide">
+                    <h3>Highlight 1</h3>
+                    <p>Annual Sports Meet</p>
+                    <img src="../image/annaul_sports_meet.jpeg" alt="Annual Sports Meet" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 5px; margin-top: 10px;">
+                </div>
+                <div class="slide hidden">
+                    <h3>Highlight 2</h3>
+                    <p>Tech Symposium</p>
+                    <img src="../image/20150412_HACKATHON-slide-ECXQ-superJumbo.webp" alt="Tech Symposium" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 5px; margin-top: 10px;">
+                </div>
+                <div class="slide hidden">
+                    <h3>Highlight 3</h3>
+                    <p>Cultural Fest</p>
+                    <img src="../image/cultural-fest.png" alt="Cultural Fest" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 5px; margin-top: 10px;">
+                </div>
+                <div class="slider-controls">
+                    <button id="prev-btn">Prev</button>
+                    <button id="next-btn">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-row">
+        <div class="flex-col">
+            <h2>FAQ</h2>
+            <div class="faq-item">
+                <div class="faq-question">How to reset password?</div>
+                <div class="faq-answer hidden">Go to login page and click on forgot password.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Where to find timetable?</div>
+                <div class="faq-answer hidden">Click on the Time Table section in your dashboard.</div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-row">
+        <div class="flex-col">
+            <a href="settings.html"><b>SETTING</b></a>
+        </div>
+        <div class="flex-col">
+            <a href="about.html"><b>ABOUT US</b></a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div id="modal-container" class="hidden">
+    <div class="modal-box">
+        <h2>Announcements</h2>
+        <p>Tomorrow is a holiday.</p>
+        <button id="close-modal-btn">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
