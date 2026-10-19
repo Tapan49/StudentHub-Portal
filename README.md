@@ -1,5 +1,8 @@
 # StudentHub Portal - Web Development Frameworks
 
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/Tapan49/StudentHub-Portal)
+**Repository URL:** `https://github.com/Tapan49/StudentHub-Portal`
+
 StudentHub is a comprehensive, production-grade full-stack university web portal designed for student lifecycle management, campus events coordination, and administrative oversight. The portal features secure role-based access control, relational database design, client-side dynamic rendering, server-side data processing, RESTful JSON APIs, and asynchronous single-page interactions.
 
 ---
